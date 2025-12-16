@@ -15,17 +15,28 @@
 
 
 5.Filter captured packets by protocol (e.g., HTTP, DNS, TCP).
-    -> 
+    -> did as asked
 
 
 6.Identify at least 3 different protocols in the capture.
-
+    -> Protocols found are:
+        i.   ARP:     used for resolving the IP addresses to the MAC addresses on the local network
+        ii.  DNS:     used for resolution of domain names to the IP addresses
+        iii. ICMPv6:  used by IPv6 networks for device discovery, address resolution, and basic network error handling
+        iv.  TCP:     in my case, to establish the connection through 3-way hanshake and then delivering the acknowledgements
+        v.   TLSv1.3: for secure and encrypted communication
+        vi.  UDP:     for faster but less reliability of data delivery
 
 
 7.Export the capture as a .pcap file.
-
+    -> captured and exported as .pcap file
+    -> uploaded the file here as Task5.pcap
 
 
 8.Summarize your findings and packet 
-
+    -> The captured network traffic mainly shows normal communication happening on the system. DNS packets are used to resolve domain names
+        into IP addresses, after which TCP connections are established using the three-way handshake. Most of the web traffic is encrypted 
+        and observed over TLSv1.3 on port 443, indicating secure HTTPS communication. ARP is used within the local network to map IP
+        addresses to MAC addresses, while UDP traffic is primarily associated with DNS queries. Additionally, ICMPv6 packets are present 
+        for IPv6 neighbor discovery and basic network control, which is expected behavior in an IPv6-enabled network.
 
